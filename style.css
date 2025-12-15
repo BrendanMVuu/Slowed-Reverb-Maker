@@ -1,0 +1,137 @@
+:root {
+  --primary: #8a2be2;
+  --bg: #0f0f13;
+  --surface: #1e1e24;
+  --text: #e0e0e0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.btn {
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+.upload-btn-wrapper input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 100px;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type=range] {
+  width: 100%;
+  margin-top: 8px;
+  accent-color: var(--primary);
+}
+
+.status {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #888;
+  height: 20px;
+}
+
+.visualizer {
+  width: 100%;
+  height: 60px;
+  background: #111;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.bar {
+  width: 5px;
+  background: var(--primary);
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s ease;
+}
+
+#playBtn {
+  margin-top: 20px;
+  background: var(--primary);
+  border: none;
+  padding: 12px 40px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#playBtn.active {
+  opacity: 1;
+  pointer-events: all;
+}

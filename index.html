@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slowed + Reverb Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Slowed + Reverb</h1>
+
+    <div class="upload-btn-wrapper">
+      <button class="btn">Select Audio File</button>
+      <input type="file" id="audioInput" accept="audio/*">
+    </div>
+
+    <div class="status" id="status">Waiting for file...</div>
+
+    <div class="controls">
+      <div>
+        <label>Speed: <span id="speedVal">0.85x</span></label>
+        <input type="range" id="speed" min="0.5" max="1.0" step="0.01" value="0.85">
+      </div>
+      <div>
+        <label>Reverb: <span id="reverbVal">40%</span></label>
+        <input type="range" id="reverb" min="0" max="1" step="0.01" value="0.4">
+      </div>
+    </div>
+
+    <div class="visualizer" id="visualizer"></div>
+    <button id="playBtn" class="btn">Play / Pause</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
