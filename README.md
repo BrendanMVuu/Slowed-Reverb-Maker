@@ -1,2 +1,2 @@
 # Slowed-Reverb-Maker
-Slowed + Reverb
+Slowed + Reverb only works on PC for right now...
